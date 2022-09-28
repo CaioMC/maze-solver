@@ -53,7 +53,11 @@ public class NeighborUtils {
     }
 
     public static boolean verifyBounds(Point point, int newRow, int newColumn) {
-        if ((newRow > point.getMSIZE() || newRow < point.getMSIZE() - point.getMSIZE()) || (newColumn > point.getMSIZE() -1 || newColumn < point.getMSIZE() - point.getMSIZE())) {
+        if (newRow < 0 || newRow > point.getMSIZE() - 1) {
+            return false;
+        }
+
+        if (newColumn < 0 || newColumn > point.getMSIZE() - 1) {
             return false;
         }
 

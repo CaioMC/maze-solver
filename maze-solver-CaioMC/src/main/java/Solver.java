@@ -54,7 +54,7 @@ public class Solver {
                     break;
                 }
             } else {
-                pointStack.pop();
+                pointStack.removeAllElements();
             }
         }
 
